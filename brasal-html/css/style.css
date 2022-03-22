@@ -1,0 +1,471 @@
+@font-face {
+    font-family: 'PT Root UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('./../fonts/PT Root UI Regular'), url('./../fonts/PT Root UI_Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'PT Root UI Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('./../fonts/PT Root UI Light'), url('./../fonts/PT Root UI_Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'PT Root UI Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('./../fonts/PT Root UI Medium'), url('./../fonts/PT Root UI_Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'PT Root UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('./../fonts/PT Root UI Bold'), url('./../fonts/PT Root UI_Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'spy_agencyregular';
+    src: url('./../fonts/spyagency-w1oy3-webfont.woff2') format('woff2'),
+         url('./../fonts/spyagency-w1oy3-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'spy_agency_boldbold';
+    src: url('./../fonts/spyagencybold-wypma-webfont.woff2') format('woff2'),
+         url('./../fonts/spyagencybold-wypma-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*--------------------------------------------------------------
+# Start General css
+--------------------------------------------------------------*/
+body {
+    background: #fff;
+    color: #555555;
+    font-family: 'PT Root UI Regular';
+    font-size: 18px;
+    line-height: 22px;
+    overflow-x: hidden;
+}
+
+body,
+html {
+    height: 100%;
+}
+.wrapper {min-height: 100%;}
+a {
+    color: inherit;
+    transition: 0.3s all ease;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 0 0;
+    padding: 0;
+    color: #fff;
+}
+h1 {
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+    font-family: 'spy_agencyregular';
+}
+h2 {
+    font-size: 40px;
+    line-height: 44px;
+    color: #fff;
+    font-family: 'spy_agencyregular';
+}
+h3{
+    font-size: 35px;
+    line-height: 35px;
+    color: #333333;
+    font-family: 'PT Root UI Bold';
+}
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+  list-style: none;
+}
+img {
+    max-width: 100%;
+}
+.white-btn {
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+    font-family: 'PT Root UI Bold';
+    padding: 11px;
+    min-width: 164px;
+    display: inline-block;
+    text-align: center;
+}
+.white-btn:hover,
+.white-btn:focus {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+}
+.title-wrapper {
+    padding: 0 15px;
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# End General css
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Start Banner css
+--------------------------------------------------------------*/
+.swiper-container {
+    overflow: hidden;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-container-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    position: relative;
+}
+.swiper-button-next, .swiper-button-prev {
+    color: #fff;
+    display: none;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.swiper-button-prev:after, 
+.swiper-container-rtl .swiper-button-next:after,
+.swiper-button-next:after, 
+.swiper-container-rtl .swiper-button-prev:after {
+    font-size: 26px;
+}
+.gallery-top  .swiper-slide {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.banner-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-content-wrapper .banner-img {
+    flex: 0 0 32%;
+    max-width: 32%;
+}
+.banner-content-wrapper .banner-content {
+    flex: 0 0 35%;
+    max-width: 35%;   
+}
+.swiper-slide .banner-content h1,
+.swiper-slide .banner-content h1 span,
+.swiper-slide .banner-content a,
+.banner-img {
+    opacity: 0;
+    transition: 0.5s ease 0.5s;
+}
+.swiper-slide-active .banner-content h1,
+.swiper-slide-active .banner-content h1 span,
+.swiper-slide-active .banner-content a,
+.swiper-slide-active .banner-img {
+    opacity: 1;
+}
+.banner-img {
+    transition: opacity 0.5s ease 0.5s;
+}
+.swiper-slide-active .banner-content h1 span {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 17px;
+    color: #fff;
+    font-family: 'PT Root UI Bold';
+    transition: opacity 0.5s ease 0.5s;
+}
+.swiper-slide-active .banner-content h1 {
+    transition: opacity 0.5s ease 0.75s;
+    margin-bottom: 33px;
+}
+.swiper-slide-active .banner-content a {
+    transition: opacity 0.5s ease 1s;
+}
+.gallery-top {
+    position: relative;
+    width: 100%;
+}
+.gallery-thumbs {
+    width: 100%;
+    padding-top: 10px;
+    position: absolute;
+}
+.gallery-thumbs .swiper-slide {
+    flex-flow: row nowrap;
+    height: 100%;
+    cursor: pointer;
+    max-height: 120px;
+}
+.gallery-thumbs .swiper-slide.orange {
+    background-color: #fa6f0a;
+}
+.gallery-thumbs .swiper-slide.brown {
+    background-color: #2a0a00;
+}
+.gallery-thumbs .swiper-slide.light-white {
+    background-color: #d9d9d9;
+}
+
+.thumb-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 17px 10px 17px 30px;
+}
+.thumb-wrapper .thumb-img {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.thumb-wrapper .tumb-content {
+    flex: 0 0 78%;
+    max-width: 78%;
+    padding-left: 15px;
+}
+.thumb-wrapper .tumb-content span{
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    font-family: 'PT Root UI Regular';
+}
+.thumb-wrapper .tumb-content h4 {
+    font-size: 22px;
+    line-height: 24px;
+    color: #fff;
+    font-family: 'PT Root UI Bold';
+}
+.gallery-thumbs .swiper-wrapper {
+    flex-direction: row;
+}
+
+
+/*--------------------------------------------------------------
+# End Banner css
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Start Product css
+--------------------------------------------------------------*/
+.product {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.product-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-wrapper .half-three-col {
+    flex: 0 0 63%;
+    max-width: 63%;
+}
+.product-wrapper .half-one-col {
+    flex: 0 0 37%;
+    max-width: 37%;
+}
+.product-wrapper .three-col {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+.product-wrapper .two-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.product a {
+    display: block;
+    height: inherit;
+}
+.product .product-img {
+    position: relative;
+    height: inherit;
+}
+.product .product-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+.product .product-img img {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    transition: all 2s ease;
+}
+.product:hover .product-img img {
+    -webkit-transition: all 6s ease;
+    transition: all 6s ease;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.product-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.product-content h2 {
+    text-align: center;
+}
+/*--------------------------------------------------------------
+# End Product css
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Start Sensation section css
+--------------------------------------------------------------*/
+.sensation-blog {
+    background: url(./../images/sensations.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 114px 0 130px;
+}
+.sensation-content h2{
+    font-size: 70px;
+    line-height: 74px;
+    font-family: 'spy_agency_boldbold';
+    margin-bottom: 17px;
+}
+.sensation-content h2 span {
+    display: block;
+}
+.sensation-content p {
+    color: #fff;
+    margin-bottom: 34px;
+}
+.sensation-content {
+    max-width: 600px;
+    margin-left: auto;
+}
+/*--------------------------------------------------------------
+# End Sensation section css
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Start News Blog section css
+--------------------------------------------------------------*/
+.news-blog {
+    padding: 48px 0 28px;
+}
+.news-blog .title-wrapper {
+    margin: 0 auto 57px;
+}
+.news-blog .title-wrapper h3{
+    margin: 0 0 16px;
+}
+.news-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.news-wrapper .news-list {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 15px;
+}
+.news-wrapper .news-list:first-child {
+    padding-left: 0;
+}
+.news-wrapper .news-list:last-child {
+    padding-right: 0;
+}
+.news-detail {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.news-content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 40px 25px;
+    text-align: center;
+    transition: 0.6s all linear;
+}
+.news-detail:hover .news-content {
+    bottom: 0;
+}
+.news-detail .news-img {
+    height: inherit;
+}
+.news-detail .news-img img {
+    width: 100%;
+    height: inherit;
+}
+.news-content h6 {
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 'PT Root UI Medium';
+    margin: 0 0 25px;
+}
+.news-content h6 span {
+    display: inline-block;
+    padding-left: 8px;
+    margin-left: 8px;
+    border-left: 1px solid #fff;
+}
+.news-content p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    margin: 0 0 20px;
+}
+.news-content a {
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    font-family: 'PT Root UI Medium';
+}
+.news-content a:hover,
+.news-content a:focus {
+    color: #000;
+}
+/*--------------------------------------------------------------
+# End News Blog section css
+--------------------------------------------------------------*/
